@@ -42,7 +42,6 @@ def get_review_list(request):
     serializer = ReviewSerializer(review, many=True)
     return Response(serializer.data)
 
-
 @api_view(['GET'])
 def get_review_by_id(request, review_id):
     review = Review.objects.get(id=review_id)
